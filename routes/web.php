@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PacienteController;
+use App\Http\Controllers\ReaccionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('formulario', function () {
-    return view('formulario');
-});
-
-Route::post('formulario', [PacienteController::class, 'datos']);
-
-
-//Auth::routes();
-
+Route::get('paciente/create', [PacienteController::class, 'create'])->name('paciente.create');
+Route::post('paciente', [PacienteController::class, 'datos'])->name('paciente.datos');
+Route::post('paciente/{paciente}/reaccion', [ReaccionController::class, 'data'])->name('reaccion.data');
+Route::get('paciente/{paciente}/reaccion/create', [ReaccionController::class, 'create'])->name('reaccion.create');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
