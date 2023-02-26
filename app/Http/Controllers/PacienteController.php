@@ -41,4 +41,5 @@ class PacienteController extends Controller
         
         return redirect()->route('reaccion.create', ['paciente' => $paciente]);
     }
+
 }

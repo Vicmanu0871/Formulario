@@ -13,4 +13,4 @@ class Reaccion extends Model
         //Establecemos una relación de pertenencia entre dos colecciones
         return $this->belongsTo(Regristro::class);
     }
-}
+}                                                                                                                                                    

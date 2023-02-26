@@ -44,6 +44,8 @@
             <input type="text" class="form-control" name="ap_materno" id="ap_materno" required>
           </div>
         </div>
+      </div>
+      <div class="row mb-3">
         <div class="col">
           <div class="form-group">
             <label for="nombre">Nombre</label>
@@ -51,8 +53,20 @@
           </div>
         </div>
       </div>
-      
-      
+      <div class="row mb-3">
+        <div class="col-4">
+          <div class="form-group">
+            <label for="cp">Código Postal</label>
+            <input type="number" class="form-control" name="cp" id="cp" required>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="colonia">Colonia</label>
+            <input type="text" class="form-control" name="colonia" id="coplonia" required>
+          </div>
+        </div>
+      </div>
       <div class="row mb-3">
         <div class="col">
           <div class="form-group">
@@ -72,20 +86,8 @@
             <input type="number" class="form-control" name="num_interior" id="num_interior">
           </div>
         </div>
-        <div class="col">
-          <div class="form-group">
-            <label for="cp">Código Postal</label>
-            <input type="number" class="form-control" name="cp" id="cp" required>
-          </div>
-        </div>
       </div>
       <div class="row mb-3">
-        <div class="col">
-          <div class="form-group">
-            <label for="colonia">Colonia</label>
-            <input type="text" class="form-control" name="colonia" id="coplonia" required>
-          </div>
-        </div>
         <div class="col">
           <div class="form-group">
             <label for="entidad">Entidad</label>
@@ -112,6 +114,8 @@
             <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" required>
           </div>
         </div>
+      </div>
+      <div class="row mb-3">
         <div class="col">
           <div class="form-group">
             <label for="peso">Peso</label>
@@ -124,18 +128,30 @@
             <input type="number" step="0.01" class="form-control" id="altura" name="altura" required>
           </div>
         </div>
+      </div>
+      <div class="row mb-3">
         <div class="col">
-          <div class="form-group">
-            <label for="sexo">Genero</label>
-            <select  class="form-control" name="sexo" id="sexo" required>
-                <option value="male">Masculino</option>
-                <option value="female">Femenino</option>
+          <label for="sexo">Genero: </label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Masculino">
+            <label class="form-check-label" for="sexo">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Femenino">
+            <label class="form-check-label" for="sexo">Femenino</label>
           </div>
         </div>
       </div>
-      <input type="reset" class="btn btn-primary btn-block mb-3" value="RESET"> 
-      <input type="submit" class="btn btn-primary btn-block mb-3" value="NEXT">
-    
+      <div class="container text-center">
+        <div class="row justify-content-md-cemter">
+          <div class="col">
+            <input type="reset" class="btn btn-primary btn-block mb-3" value="RESET"> 
+            <input type="submit" class="btn btn-primary btn-block mb-3" value="NEXT">
+          </div>
+          
+        </div>
+      </div>
+          
     </form>
   </div>
 @endsection

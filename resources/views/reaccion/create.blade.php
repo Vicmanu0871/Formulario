@@ -44,13 +44,15 @@
                 </div>
             </div>
         </div>
-            
-            <div class="form-group">
-                <label for="descripcion">Descripcion del evento (incluyendo datos y exploracion):</label>
-                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
-              </div>
-              
-        <button type="submit">Guardar</button>
+        
+        <div class="form-group">
+            <label for="descripcion">Descripcion del evento (incluyendo datos y exploracion):</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+        </div>
+        
+        <div class="d-grid gap-2">
+            <button class="btn btn-outline-info" type="submit">Guardar</button>
+        </div>
     </form>
     </div>
     @endsection

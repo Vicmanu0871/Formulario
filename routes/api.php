@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\PacienteController;
+use App\Models\Reaccion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::controller(PacienteController::class)->group(function(){
+    Route::get('/pacientes', 'index');
+    Route::post('/paciente', 'store');
+    Route::put('/paciente/{id}', 'update');
+    Route::delete('/paciente/{id}', 'destroy');
 });
